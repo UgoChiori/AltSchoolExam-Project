@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import Pagination from "./Components/Pagination";
 import { USER_PER_PAGE } from "./Components/UserPerPage";
 import Users from "./Components/Users";
@@ -42,7 +43,7 @@ function MyGithub() {
       page={page}/>
       <h1>My Github Repositories</h1>
       <Users users={portfolio} page={page} />
-      
+      <NavLink to="/">Home</NavLink>
     </div>
   );
 }
