@@ -1,4 +1,5 @@
 import React, { createContext, useState } from "react";
+import Profile from "./Components/Profile";
 import { Routes, Route } from "react-router-dom";
 import ErrorBoundary from "./Components/ErrorBoundary";
 import Home from "./Home";
@@ -18,10 +19,10 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <section>
-        <div className="Home" id={theme}>
+        <div style={{display:'flex', justifyContent:'space-between'}} className="Home" id={theme}>
           <ErrorBoundary>
-            <NavBar />
-            <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
+            <Profile />
+            <div style={{border:'1px solid black', height:'100%', flexGrow:'1'}}>
             <Routes>
               <Route path="/" element={<Home />} />
 
@@ -30,6 +31,10 @@ function App() {
               <Route path="/contact" element={<MyForm />} />
               <Route path="*" element={<Error />} />
             </Routes>
+            </div>
+            {/* <NavBar /> */}
+            {/* <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} /> */}
+            
           </ErrorBoundary>
         </div>
       </section>

@@ -3,6 +3,7 @@ import React from "react";
 function Pagination({
   totalPages,
   handleClick,
+  
 
   page,
   setPage,
@@ -36,7 +37,7 @@ function Pagination({
         className="buttons"
         style={{ height: "30px", width: "50px" }}
         onClick={(e)=>{handleClick("next")}}
-        disabled={page === 9}
+        disabled={page === 16}
       >
         {">>>"}
       </button>
