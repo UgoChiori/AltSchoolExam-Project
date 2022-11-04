@@ -13,7 +13,7 @@ function MyRepositories() {
             <Link to="repo3">MyPortfolio</Link>
             <Link to="repo4">HackathonPhonie</Link>
 
-            <Link to="repo5">FlightBooking</Link>
+            <Link to="repo5">FlightBooking.</Link>
             <Link to="repo6">MyChromeExtension</Link>
           </nav>
 
