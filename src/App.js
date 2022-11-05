@@ -74,6 +74,7 @@ function App() {
               }}
             >
               <Routes>
+                <Route path="/" element={<MyGithub />} />
                 <Route path="/portfolio" element={<MyGithub />}>
                   <Route path=":id" element={<MyRepo />} />
                 </Route>
