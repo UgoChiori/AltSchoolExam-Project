@@ -43,19 +43,7 @@ h1 {
   color: black;
 }
 
-#dark {
-  background-color: rgb(31, 7, 7);
-  color: #fff;
-  font-size: 20px;
-}
 
-#dark .nav-link {
-  color: rgb(231, 230, 227);
-}
-#dark a:hover {
-  background-color: white;
-  color: black;
-}
 article {
   margin: 0 auto;
   max-width: 800px;
@@ -65,7 +53,7 @@ article {
 .buttons {
   justify-content: space-around;
   margin: 5px;
-
+  cursor: pointer;
   border-radius: 5px;
   box-shadow: black;
 }

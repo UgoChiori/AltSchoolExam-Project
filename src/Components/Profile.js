@@ -22,15 +22,21 @@ function Profile({
         <p>{location}</p>
         <div>
           <a href="https://github.com/UgoChiori?tab=followers">
-            Followers: {followers}
+            <button
+              className="
+          buttons"
+            >
+              Followers: {followers}
+            </button>
           </a>
         </div>
         <div>
           <a href="https://github.com/UgoChiori?tab=following">
-            Following: {following}
+            <button className="buttons">Following: {following}</button>
           </a>
         </div>
-        <a href="https://twitter.com/AdaOhafia">{twitter_username}</a>
+
+        <a href="https://twitter.com/AdaOhafia/">{twitter_username}</a>
 
         <p>{public_repos}</p>
         <a href="https://github.com/UgoChiori">{html_url}</a>

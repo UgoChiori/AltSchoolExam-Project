@@ -1,13 +1,16 @@
 import React, { createContext, useState, useEffect } from "react";
 import Profile from "./Components/Profile";
 import { Routes, Route } from "react-router-dom";
-import ErrorBoundary from "./Components/ErrorBoundary";
+import { ErrorBoundary } from "react-error-boundary";
 import { USER_PER_PAGE } from "./Components/UserPerPage";
 import MyRepo from "./MyRepo";
 import Error from "./Error";
 import MyGithub from "./MyGithub";
-import ReactSwitch from "react-switch";
 import axios from "axios";
+import ErrorFallback from "./Components/ErrorBoundary";
+
+
+
 
 export const ThemeContext = createContext("null");
 
@@ -18,8 +21,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
   const [profiledata, setProfileData] = useState([]);
-
-  // <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
+  const [explode, setExplode] = useState(false);
 
   useEffect(() => {
     const repoPromise = axios.get(
@@ -28,7 +30,7 @@ function App() {
     const profilePromise = axios.get("https://api.github.com/users/UgoChiori");
     Promise.all([repoPromise, profilePromise])
       .then(([repoResponse, profileResponse]) => {
-        console.log(repoResponse.data);
+       
         setPortFolio(repoResponse.data);
         setTotalPages(Math.ceil(repoResponse.data.length / USER_PER_PAGE));
         setLoading(false);
@@ -53,7 +55,11 @@ function App() {
           className="Home"
           id={theme}
         >
-          <ErrorBoundary>
+          <ErrorBoundary
+            FallbackComponent={ErrorFallback}
+            onReset={() => setExplode(false)}
+            {...{ explode }}
+          >
             <Profile
               imgSrc={profiledata.avatar_url}
               name={profiledata.name}
@@ -83,6 +89,7 @@ function App() {
               </Routes>
             </div>
           </ErrorBoundary>
+       
         </div>
       </section>
     </ThemeContext.Provider>

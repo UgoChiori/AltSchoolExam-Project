@@ -37,7 +37,7 @@ function Pagination({
         className="buttons"
         style={{ height: "30px", width: "50px" }}
         onClick={(e)=>{handleClick("next")}}
-        disabled={page === 16}
+        disabled={page === 5}
       >
         Next
       </button>

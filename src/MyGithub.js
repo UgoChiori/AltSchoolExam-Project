@@ -4,20 +4,17 @@ import { USER_PER_PAGE } from "./Components/UserPerPage";
 import Users from "./Components/Users";
 import { Outlet, useOutlet } from "react-router-dom";
 
-
-
 function MyGithub() {
   const [portfolio, setPortFolio] = useState([]);
   const [totalPages, setTotalPages] = useState(0);
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
   const [dynamicRoute, setDynamicRoute] = useState(false);
-  
 
-  const Context = React.createContext({})
-  const outlet = useOutlet()
+  const Context = React.createContext({});
+  const outlet = useOutlet();
 
-  function chooseRepo () {
+  function chooseRepo() {
     setDynamicRoute(true);
   }
 
@@ -25,7 +22,7 @@ function MyGithub() {
     fetch("https://api.github.com/users/UgoChiori/repos")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+       
 
         setPortFolio(data);
         setTotalPages(Math.ceil(data.length / USER_PER_PAGE));
@@ -54,10 +51,9 @@ function MyGithub() {
         setPage={setPage}
         page={page}
       />
-      {dynamicRoute ? (
-        <Context.Provider value={portfolio}>
-          {outlet}
-        </Context.Provider>
+      <Outlet context={[portfolio, setPortFolio]}  />
+      {/* {dynamicRoute ? (
+        <Outlet context={[portfolio, setPortFolio]}  />
       ) : (
         <div
           style={{
@@ -73,7 +69,7 @@ function MyGithub() {
         >
           Choose Repository
         </div>
-      )}
+      )} */}
     </div>
   );
 }
