@@ -1,8 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 
-
-function MyForm  ()  {
+function MyForm() {
   return (
     <div>
       <form alt="contact form">
@@ -14,10 +12,8 @@ function MyForm  ()  {
         <textarea id="message" />
         <button type="submit">Send</button>
       </form>
-      <NavLink to="/">Home</NavLink>
     </div>
   );
 }
 
-
-export default MyForm; 
+export default MyForm;
