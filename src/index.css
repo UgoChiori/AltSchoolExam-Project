@@ -5,6 +5,8 @@
 }
 body {
   background-color: rgb(220, 218, 220);
+  overflow: hidden;
+ 
 }
 #profile {
   background-color: lightslategrey;
@@ -85,6 +87,11 @@ a {
   box-shadow: black;
 }
 
-@media (min-width: 768px) {
+@media all and (max-width: 768px) {
+  #profile {
+
+  color: white;
   
-}
+  } 
+  
+ }

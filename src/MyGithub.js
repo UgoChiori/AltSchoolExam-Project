@@ -43,7 +43,7 @@ function MyGithub() {
 
   return (
     <div>
-      <h1>My Github Repositories</h1>
+      <h1 alt="repository list">My Github Repositories</h1>
       <Users users={portfolio} page={page} chooseRepo={chooseRepo} />
       <Pagination
         totalPages={totalPages}

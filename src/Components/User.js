@@ -10,9 +10,9 @@ import {Link } from "react-router-dom";
       
           
       <article key={id}>
-        <h4>{name}</h4>
+        <h2>{name}</h2>
         <p>{description}</p>
-        <h5>Click</h5>
+        <p>Click</p>
 
 
   

@@ -8,6 +8,7 @@ import Error from "./Error";
 import MyGithub from "./MyGithub";
 import axios from "axios";
 import ErrorFallback from "./Components/ErrorBoundary";
+import { HelmetProvider } from "react-helmet-async";
 
 
 
@@ -44,6 +45,10 @@ function App() {
     setTheme((curr) => (curr === "light" ? "dark" : "light"));
   };
   return (
+    <HelmetProvider>
+      <title>Software Developer portfolio</title>
+      <meta name="description" content="Software developers in Lagos Nigeria" />
+      <link rel="canonical" href="/portfolio" />
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <section style={{ height: "100%" }}>
         <div
@@ -61,7 +66,7 @@ function App() {
             onReset={() => setExplode(false)}
             {...{ explode }}
           >
-            <Profile
+            <Profile alt="fetched data"
               imgSrc={profiledata.avatar_url}
               name={profiledata.name}
               bio={profiledata.bio}
@@ -94,6 +99,7 @@ function App() {
         </div>
       </section>
     </ThemeContext.Provider>
+    </HelmetProvider>
   );
 }
 

@@ -31,8 +31,8 @@ function MyRepo(props) {
         alignItems: "center",
       }}
     >
-      <h1>{repo.name}</h1>
-      <p>{repo.description}</p>
+      <h1 alt="title and details of repositories">{repo.name}</h1>
+      <p alt="more details of repos">{repo.description}</p>
       <a href={repo.html_url}>Visit</a>
     </div>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import { HelmetProvider } from "react-helmet-async";
 
 function Profile({
   imgSrc = "./placeholderimage.jpeg",
@@ -12,12 +13,17 @@ function Profile({
   html_url,
 }) {
   return (
+    <>
+    <HelmetProvider>
+      <title>Software Developer portfolio</title>
+      <meta name="description" content="Software developers in Lagos Nigeria" />
+      <link rel="canonical" href="/portfolio" />
     <div id="profile">
       <div id="avatar">
-        <img src={imgSrc} alt="avatar" />
+        <img src={imgSrc} alt="lady" />
       </div>
       <div id="profile-details">
-        <h1>{name}</h1>
+        <h1 alt="profile name">{name}</h1>
         <p>{bio}</p>
         <p>{location}</p>
         <div>
@@ -45,6 +51,8 @@ function Profile({
         </a>
       </div>
     </div>
+    </HelmetProvider>
+    </>
   );
 }
 
