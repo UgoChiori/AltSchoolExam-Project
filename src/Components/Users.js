@@ -9,10 +9,10 @@ const Users = ({ users, page, chooseRepo }) => {
   return (
     <div
       style={{
-        border: "1px solid black",
+        
         height: "300px",
         width: "100%",
-        padding:"0 10px",
+        padding: "0 10px",
         display: "flex",
         justifyContent: "space-between",
       }}

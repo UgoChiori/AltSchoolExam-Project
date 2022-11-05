@@ -48,6 +48,7 @@ function App() {
       <section style={{ height: "100%" }}>
         <div
           style={{
+            
             display: "flex",
             justifyContent: "space-between",
             height: "100%",

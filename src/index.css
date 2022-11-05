@@ -3,14 +3,16 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body {
+  background-color: rgb(220, 218, 220);
+}
 #profile {
+  background-color: lightslategrey;
   padding: 5px;
   height: 100vh;
   width: 250px;
   border: 3px solid black;
   border-radius: 10px;
-  background-color: rgb(210, 108, 163);
 }
 
 #profile #avatar {
@@ -43,7 +45,6 @@ h1 {
   color: black;
 }
 
-
 article {
   margin: 0 auto;
   max-width: 800px;
@@ -55,5 +56,35 @@ article {
   margin: 5px;
   cursor: pointer;
   border-radius: 5px;
+  font-size: 15px;
   box-shadow: black;
+}
+.buttons:hover {
+  background-color: rgb(17, 8, 8);
+  color: white;
+}
+
+a .buttons {
+  text-decoration: none;
+  color: black;
+}
+a {
+  text-decoration: none;
+
+  color: black;
+}
+ .btns {
+  padding: 5px;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+ 
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: black;
+}
+
+@media (min-width: 768px) {
+  
 }

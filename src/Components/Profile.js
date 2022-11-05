@@ -8,7 +8,7 @@ function Profile({
   followers,
   following,
   twitter_username,
-  public_repos,
+
   html_url,
 }) {
   return (
@@ -36,10 +36,13 @@ function Profile({
           </a>
         </div>
 
-        <a href="https://twitter.com/AdaOhafia/">{twitter_username}</a>
+        <a href="https://twitter.com/AdaOhafia/">
+          <button className="btns">{twitter_username}</button>
+        </a>
 
-        <p>{public_repos}</p>
-        <a href="https://github.com/UgoChiori">{html_url}</a>
+        <a href="https://github.com/UgoChiori">
+          <button className="btns">{html_url}</button>
+        </a>
       </div>
     </div>
   );

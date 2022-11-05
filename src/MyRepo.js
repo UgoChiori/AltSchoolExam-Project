@@ -5,18 +5,15 @@ function MyRepo(props) {
   const { id } = useParams();
   const [repo, setRepo] = useState([]);
 
- 
   const [portfolio, setPortFolio] = useOutletContext();
- ;
 
   useEffect(() => {
     portfolio.map((item) => {
-      if (item.id === id) {
+      if (item.id === Number(id)) {
         setRepo(item);
       }
     });
- ;
-  }, []);
+  }, [id]);
 
   return (
     <div
@@ -25,10 +22,11 @@ function MyRepo(props) {
         width: "100%",
         height: "300px",
         padding: "10px",
-        border: "1px solid black",
+        border: "4px solid black",
+        borderRadius: "10px",
         display: "flex",
         flexDirection: "column",
-      
+        backgroundColor: "lightslategrey",
         justifyContent: "center",
         alignItems: "center",
       }}
@@ -36,9 +34,6 @@ function MyRepo(props) {
       <h1>{repo.name}</h1>
       <p>{repo.description}</p>
       <a href={repo.html_url}>Visit</a>
-      
-      
-
     </div>
   );
 }
