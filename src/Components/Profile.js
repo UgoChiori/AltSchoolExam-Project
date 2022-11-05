@@ -1,34 +1,40 @@
 import React from "react";
 
-function Profile() {
+function Profile({
+  imgSrc = "./placeholderimage.jpeg",
+  name,
+  bio,
+  location,
+  followers,
+  following,
+  twitter_username,
+  public_repos,
+  html_url,
+}) {
   return (
     <div id="profile">
-      Profile
       <div id="avatar">
-        <img id="avatar" src="https://avatars.githubusercontent.com/u/104375171?v=4" alt="avatar" />
+        <img src={imgSrc} alt="avatar" />
       </div>
-        <div id="profile-details">
-            <h5>City: </h5>
-            <h5>Country:</h5>
-
-            <ul>
-                <li>English</li>
-                <li> Français</li>
-                <li> Efìk</li>
-                <li>Igbo</li>
-            </ul>
-            <ul className="">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>OpenSource</li>
-            </ul>
-
+      <div id="profile-details">
+        <h1>{name}</h1>
+        <p>{bio}</p>
+        <p>{location}</p>
+        <div>
+          <a href="https://github.com/UgoChiori?tab=followers">
+            Followers: {followers}
+          </a>
         </div>
-    
+        <div>
+          <a href="https://github.com/UgoChiori?tab=following">
+            Following: {following}
+          </a>
+        </div>
+        <a href="https://twitter.com/AdaOhafia">{twitter_username}</a>
 
-
+        <p>{public_repos}</p>
+        <a href="https://github.com/UgoChiori">{html_url}</a>
+      </div>
     </div>
   );
 }
