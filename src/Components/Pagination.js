@@ -30,7 +30,7 @@ function Pagination({
         
         disabled={page === 1}
       >
-        {"<<<"}
+        Prev
       </button>
 
       <button
@@ -39,7 +39,7 @@ function Pagination({
         onClick={(e)=>{handleClick("next")}}
         disabled={page === 16}
       >
-        {">>>"}
+        Next
       </button>
     </div>
   );

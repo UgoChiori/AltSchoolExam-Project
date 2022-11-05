@@ -3,10 +3,8 @@ import Profile from "./Components/Profile";
 import { Routes, Route } from "react-router-dom";
 import ErrorBoundary from "./Components/ErrorBoundary";
 import { USER_PER_PAGE } from "./Components/UserPerPage";
-import NavigationLink from "./Components/NavBar";
+import MyRepo from "./MyRepo";
 import Error from "./Error";
-import MyForm from "./Contact";
-
 import MyGithub from "./MyGithub";
 import ReactSwitch from "react-switch";
 import axios from "axios";
@@ -56,24 +54,16 @@ function App() {
           id={theme}
         >
           <ErrorBoundary>
-            <NavigationLink />
             <Profile
               imgSrc={profiledata.avatar_url}
               name={profiledata.name}
               bio={profiledata.bio}
               location={profiledata.location}
-              email={profiledata.email}
               followers={profiledata.followers}
               following={profiledata.following}
               public_repos={profiledata.public_repos}
-              public_gists={profiledata.public_gists}
               html_url={profiledata.html_url}
-              blog={profiledata.blog}
               twitter_username={profiledata.twitter_username}
-              hireable={profiledata.hireable}
-              company={profiledata.company}
-              created_at={profiledata.created_at}
-              updated_at={profiledata.updated_at}
             />
             <div
               style={{
@@ -84,8 +74,10 @@ function App() {
               }}
             >
               <Routes>
-                <Route path="/portfolio" element={<MyGithub />} />
-                <Route path="/contact" element={<MyForm />} />
+                <Route path="/portfolio" element={<MyGithub />}>
+                  <Route path=":id" element={<MyRepo />} />
+                </Route>
+
                 <Route path="*" element={<Error />} />
               </Routes>
             </div>
