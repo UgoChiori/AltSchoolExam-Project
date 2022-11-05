@@ -43,7 +43,7 @@ function MyGithub() {
       page={page}/>
       <h1>My Github Repositories</h1>
       <Users users={portfolio} page={page} />
-      <NavLink to="/">Home</NavLink>
+      
     </div>
   );
 }
