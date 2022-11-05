@@ -85,12 +85,10 @@ function App() {
             >
               <Routes>
                 <Route path="/portfolio" element={<MyGithub />} />
-
                 <Route path="/contact" element={<MyForm />} />
                 <Route path="*" element={<Error />} />
               </Routes>
             </div>
-           
           </ErrorBoundary>
         </div>
       </section>
