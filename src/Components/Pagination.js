@@ -22,7 +22,7 @@ function Pagination({
   };
 
   return (
-    <div style={{ width: "fit-content", margin: "auto" }}>
+    <div id="paginate" style={{ width: "fit-content", margin: "auto" }}>
       <button
         className="buttons"
         style={{ height: "30px", width: "50px" }}
@@ -37,7 +37,7 @@ function Pagination({
         className="buttons"
         style={{ height: "30px", width: "50px" }}
         onClick={(e)=>{handleClick("next")}}
-        disabled={page === 5}
+        disabled={page === 4}
       >
         Next
       </button>

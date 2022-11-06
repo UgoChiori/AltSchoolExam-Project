@@ -42,7 +42,7 @@ function MyGithub() {
   }
 
   return (
-    <div>
+    <div style={{width: '100', border:'1px soild black', position:'relative'}}>
       <h1 alt="repository list">My Github Repositories</h1>
       <Users users={portfolio} page={page} chooseRepo={chooseRepo} />
       <Pagination

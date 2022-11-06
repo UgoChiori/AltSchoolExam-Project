@@ -16,9 +16,9 @@ function MyRepo(props) {
   }, [id]);
 
   return (
-    <div
+    <div id="outlet"
       style={{
-        marginTop: "50px",
+        // marginTop: "50px",
         width: "100%",
         height: "300px",
         padding: "10px",

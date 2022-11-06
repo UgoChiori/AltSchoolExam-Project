@@ -19,11 +19,14 @@ function Profile({
       <meta name="description" content="Software developers in Lagos Nigeria" />
       <link rel="canonical" href="/portfolio" />
     <div id="profile">
+      <div id="profile-section">
       <div id="avatar">
         <img src={imgSrc} alt="lady" />
       </div>
+      <h1 alt="profile name">{name}</h1>
+      </div>
       <div id="profile-details">
-        <h1 alt="profile name">{name}</h1>
+        
         <p>{bio}</p>
         <p>{location}</p>
         <div>

@@ -79,7 +79,7 @@ function App() {
             />
             <div
               style={{
-                border: "1px solid black",
+                
                 minHeight: "100%",
                 flexGrow: "1",
                 flexDirection: "column",
