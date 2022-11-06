@@ -17,7 +17,7 @@ function Profile({
     <HelmetProvider>
       <title>Software Developer portfolio</title>
       <meta name="description" content="Software developers in Lagos Nigeria" />
-      <link rel="canonical" href="/portfolio" />
+      <link rel="canonical" href="http://localhost:3001/portfolio/" />
     <div id="profile">
       <div id="profile-section">
       <div id="avatar">

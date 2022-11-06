@@ -13,8 +13,12 @@ function MyGithub() {
 
   const Context = React.createContext({});
   const outlet = useOutlet();
-
+  function scrollView(z) {
+    z.current.scrollIntoView();
+  }
   function chooseRepo() {
+    // console.log('why so stressful')
+    // window.scrollTo(0, 860)
     setDynamicRoute(true);
   }
 
@@ -22,8 +26,6 @@ function MyGithub() {
     fetch("https://api.github.com/users/UgoChiori/repos")
       .then((res) => res.json())
       .then((data) => {
-       
-
         setPortFolio(data);
         setTotalPages(Math.ceil(data.length / USER_PER_PAGE));
         setLoading(false);
@@ -42,17 +44,25 @@ function MyGithub() {
   }
 
   return (
-    <div style={{width: '100', border:'1px soild black', position:'relative'}}>
+    <div
+      style={{ width: "100", border: "1px soild black", position: "relative" }}
+    >
       <h1 alt="repository list">My Github Repositories</h1>
-      <Users users={portfolio} page={page} chooseRepo={chooseRepo} />
+      <Users
+        users={portfolio}
+        page={page}
+        chooseRepo={chooseRepo}
+        scrollView={scrollView}
+        dynamicRoute={dynamicRoute}
+      />
+
       <Pagination
         totalPages={totalPages}
         handleClick={handleClick}
         setPage={setPage}
         page={page}
       />
-      <Outlet context={[portfolio, setPortFolio]}  />
-      
+      <Outlet context={[portfolio, setPortFolio, scrollView, dynamicRoute]} />
     </div>
   );
 }
