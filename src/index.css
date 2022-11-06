@@ -60,14 +60,13 @@ article {
   font-size: 15px;
   box-shadow: black;
 }
-.buttons:hover {
-  background-color: rgb(17, 8, 8);
-  color: white;
-}
+
 
 a .buttons {
+  border-radius: 5px;
   text-decoration: none;
-  color: black;
+  background-color: black;
+  color: white
 }
 #user-data {
   height: 80%;
@@ -85,6 +84,7 @@ a .buttons {
 }
 a {
   text-decoration: none;
+  
 
   color: black;
 }
@@ -94,10 +94,11 @@ a {
   display: flex;
   justify-content: space-around;
   margin: 5px;
-
+background-color: black;
+  color: white;
   cursor: pointer;
   border-radius: 5px;
-  box-shadow: black;
+  /* box-shadow: black; */
 }
 
 @media screen and (max-width: 667px) {
