@@ -55,6 +55,8 @@ article {
   justify-content: space-around;
   margin: 5px;
   cursor: pointer;
+  background-color: black;
+  color: white;
   border-radius: 5px;
   font-style: bolder;
   font-size: 15px;

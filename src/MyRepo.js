@@ -33,7 +33,7 @@ function MyRepo(props) {
     >
       <h4 alt="title and details of repositories">{repo.name}</h4>
       <p alt="more details of repos">{repo.description}</p>
-      <a href={repo.html_url}>Visit</a>
+      <a href={repo.html_url}><button className="buttons">CLICK </button></a>
     </div>
   );
 }
