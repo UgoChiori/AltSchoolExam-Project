@@ -1,1 +1,1 @@
-export const USER_PER_PAGE = 4;
+export const USER_PER_PAGE = 1;

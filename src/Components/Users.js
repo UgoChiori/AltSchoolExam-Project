@@ -10,11 +10,7 @@ const Users = ({ users, page, chooseRepo }) => {
     <div
       id="data-card"
       style={{
-        height: "300px",
         width: "100%",
-        padding: "0 10px",
-        display: "flex",
-        justifyContent: "space-between",
       }}
     >
       {selectedUsers.map((user) => (
