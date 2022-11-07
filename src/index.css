@@ -75,6 +75,16 @@ a .buttons {
   background-color: black;
   color: white;
 }
+button {
+  border: none;
+  background-color: black;
+  cursor: pointer;
+  font-size: 1rem;
+  color: white;
+  font-weight: 20px;
+  border-radius: 5px;
+  /* margin: 0 10px; */
+}
 #user-data {
   height: 80%;
   width: 265px;

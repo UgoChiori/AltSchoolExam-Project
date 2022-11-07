@@ -19,7 +19,7 @@ const User = ({ id, name, description, chooseRepo }) => {
         <article key={id}>
           <h3>{name}</h3>
           <p>{description}</p>
-          <p>Click</p>
+          <button style={{border:'1px solid black'}}>Click</button>
         </article>
       </div>
     </Link>

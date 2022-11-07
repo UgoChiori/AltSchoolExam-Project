@@ -79,6 +79,7 @@ function App() {
                 html_url={profiledata.html_url}
                 twitter_username={profiledata.twitter_username}
               />
+              
               <div
                 style={{
                   minHeight: "100%",

@@ -17,8 +17,7 @@ function MyGithub() {
     z.current.scrollIntoView();
   }
   function chooseRepo() {
-    // console.log('why so stressful')
-    // window.scrollTo(0, 860)
+    
     setDynamicRoute(true);
   }
 

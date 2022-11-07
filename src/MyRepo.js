@@ -45,7 +45,7 @@ function MyRepo(props) {
       <p alt="more details of repos">Forks Count: {repo.forks_count}</p>
 
       <a href={repo.html_url}>
-        <button className="buttons">CLICK </button>
+        <button className="buttons">CLICK FOR MORE </button>
       </a>
     </div>
   );

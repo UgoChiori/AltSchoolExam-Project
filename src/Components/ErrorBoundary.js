@@ -1,4 +1,4 @@
-import { ErrorBoundary } from "react-error-boundary";
+import React from "react";
 
 function ErrorFallback({ error, resetErrorBoundary }) {
   return (
