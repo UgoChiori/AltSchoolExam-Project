@@ -9,11 +9,12 @@ import MyGithub from "./MyGithub";
 import axios from "axios";
 import ErrorFallback from "./Components/ErrorBoundary";
 import { HelmetProvider } from "react-helmet-async";
+import ReactSwitch from "react-switch";
 
 export const ThemeContext = createContext("null");
 
 function App() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
   const [portfolio, setPortFolio] = useState([]);
   const [totalPages, setTotalPages] = useState(0);
   const [loading, setLoading] = useState(true);
@@ -47,6 +48,11 @@ function App() {
       <link rel="canonical" href="/portfolio" />
       <ThemeContext.Provider value={{ theme, toggleTheme }}>
         <section style={{ height: "100%" }}>
+        <div className="switch">
+            <label>{theme=== "light" ? "Light Mode" : "Dark Mode"}</label>
+            <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
+          </div>
+        
           <div
             style={{
               display: "flex",
