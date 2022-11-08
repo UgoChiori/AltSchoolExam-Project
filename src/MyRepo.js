@@ -26,7 +26,7 @@ function MyRepo(props) {
       id="outlet"
       ref={ref}
       style={{
-        // marginTop: "50px",
+       
         width: "100%",
         height: "300px",
         padding: "10px",
@@ -53,4 +53,4 @@ function MyRepo(props) {
 
 export default MyRepo;
 
-// () => scollToRef.current.scrollIntoView()
+

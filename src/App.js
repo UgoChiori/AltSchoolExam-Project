@@ -1,15 +1,19 @@
 import React, { createContext, useState, useEffect } from "react";
 import Profile from "./Components/Profile";
 import { Routes, Route } from "react-router-dom";
-import { ErrorBoundary } from "react-error-boundary";
 import { USER_PER_PAGE } from "./Components/UserPerPage";
 import MyRepo from "./MyRepo";
+import NavBar from "./Components/NavBar";
 import Error from "./Error";
 import MyGithub from "./MyGithub";
 import axios from "axios";
-import ErrorFallback from "./Components/ErrorBoundary";
+import ErrorBoundary from "./Components/ErrorBoundary";
 import { HelmetProvider } from "react-helmet-async";
 import ReactSwitch from "react-switch";
+
+function Bomb() {
+  throw new Error("💥 GO AWAY!!!💥");
+}
 
 export const ThemeContext = createContext("null");
 
@@ -48,11 +52,11 @@ function App() {
       <link rel="canonical" href="/portfolio" />
       <ThemeContext.Provider value={{ theme, toggleTheme }}>
         <section style={{ height: "100%" }}>
-        <div className="switch">
-            <label>{theme=== "light" ? "Light Mode" : "Dark Mode"}</label>
+          <div className="switch">
+            <label>{theme === "light" ? "Light Mode" : "Dark Mode"}</label>
             <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
           </div>
-        
+
           <div
             style={{
               display: "flex",
@@ -62,11 +66,9 @@ function App() {
             className="Home"
             id={theme}
           >
-            <ErrorBoundary
-              FallbackComponent={ErrorFallback}
-              onReset={() => setExplode(false)}
-              {...{ explode }}
-            >
+            <ErrorBoundary>
+              {explode ? <Bomb /> : null}
+              <NavBar setExplode={setExplode} />
               <Profile
                 alt="fetched data"
                 imgSrc={profiledata.avatar_url}
@@ -79,7 +81,7 @@ function App() {
                 html_url={profiledata.html_url}
                 twitter_username={profiledata.twitter_username}
               />
-              
+
               <div
                 style={{
                   minHeight: "100%",
