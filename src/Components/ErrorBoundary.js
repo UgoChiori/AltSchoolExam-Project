@@ -1,4 +1,5 @@
 import React from "react";
+import {Link } from "react-router-dom";
 
 
 
@@ -28,12 +29,14 @@ class ErrorBoundary extends React.Component {
             <br />
             {this.state.errorInfo.componentStack}
           </details>
+          <Link to="/">Back</Link>
         </div>
       );
     }
     
     return this.props.children;
   }  
+  
 }
 
 export default ErrorBoundary

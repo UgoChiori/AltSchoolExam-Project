@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 function NavBar({ setExplode }) {
   return (
     <div>
-     <NavLink to="/"></NavLink>
+     <NavLink to="/portfolio"></NavLink>
      <button onClick={() => setExplode((e) => !e)}>ErrorBoundary</button> 
     </div>
   );
