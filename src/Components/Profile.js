@@ -1,5 +1,6 @@
 import React from "react";
 import { HelmetProvider } from "react-helmet-async";
+import { FaGithub, FaTwitter } from "react-icons/fa";
 
 function Profile({
   imgSrc = "./placeholderimage.jpeg",
@@ -9,7 +10,6 @@ function Profile({
   followers,
   following,
   twitter_username,
-
   html_url,
 }) {
   return (
@@ -23,34 +23,33 @@ function Profile({
       <div id="avatar">
         <img src={imgSrc} alt="lady" />
       </div>
-      <h1 alt="profile name">{name}</h1>
+      <h1 alt="profile name" className="pro-name">{name}</h1>
       </div>
       <div id="profile-details">
         
-        <p>{bio}</p>
-        <p>{location}</p>
+        <p id="bio">{bio}</p>
+        <p id="bio">{location}</p>
         <div>
           <a href="https://github.com/UgoChiori?tab=followers">
-            <button
-              className="
-          buttons"
+            <h3
+              id="bionic"
             >
               Followers: {followers}
-            </button>
+            </h3>
           </a>
         </div>
         <div>
           <a href="https://github.com/UgoChiori?tab=following">
-            <button className="buttons">Following: {following}</button>
+            <h3 id="bionic">Following: {following}</h3>
           </a>
         </div>
 
         <a href="https://twitter.com/AdaOhafia/">
-          <button className="btns">{twitter_username}</button>
+          <button id="icons">{<FaTwitter/>}</button>
         </a>
 
         <a href="https://github.com/UgoChiori">
-          <button className="btns">{html_url}</button>
+          <button id="icons">{<FaGithub/>}</button>
         </a>
       </div>
     </div>

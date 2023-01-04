@@ -44,7 +44,7 @@ function MyGithub() {
 
   return (
     <div
-      style={{ width: "100", border: "1px soild black", position: "relative" }}
+      // style={{ width: "100", border: "1px soild black", position: "relative" }}
     >
       <h1 alt="repository list">My Github Repositories</h1>
       <Users
@@ -61,7 +61,7 @@ function MyGithub() {
         setPage={setPage}
         page={page}
       />
-      <Outlet context={[portfolio, setPortFolio, scrollView, dynamicRoute]} />
+      <Outlet context={[portfolio, setPortFolio, scrollView, dynamicRoute]} id="outlet" />
     </div>
   );
 }

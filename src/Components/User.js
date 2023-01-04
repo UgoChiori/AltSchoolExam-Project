@@ -10,16 +10,16 @@ const User = ({ id, name, description, chooseRepo }) => {
         
         id="user-data"
         style={{
-          border: "4px solid black",
-          backgroundColor: "lightslategrey",
+         
+          // backgroundColor: "lightslategrey",
           borderRadius: "10px",
         }}
         onClick={chooseRepo}
       >
         <article key={id}>
           <h3>{name}</h3>
-          <p>{description}</p>
-          <button style={{border:'1px solid black'}}>Click</button>
+          <p id="desc">{description}</p>
+          <button style={{border:'1px solid black'}}>View More</button>
         </article>
       </div>
     </Link>

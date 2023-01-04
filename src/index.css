@@ -1,37 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 * {
-  /* margin: 0; */
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
 }
 body {
-  background-color: lightslategray;
- 
+  /* font-family: "Roboto", sans-serif; */
+  background: url(https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80);
 }
- 
 
 #profile {
   padding: 5px;
   height: 100vh;
   width: 250px;
 }
-#light {
-  background-color: white;
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
 }
-#dark {
-  background-color: lightslategrey;
+#desc a {
+  text-decoration: none;
 }
 #profile #avatar {
   height: 195px;
   width: 195px;
   border-radius: 50%;
-  border: 1px solid black;
+
   margin: 10px;
 }
 #avatar img {
-  border: 1px solid black;
   height: 100%;
   width: 100%;
   border-radius: inherit;
+}
+#bio {
+  margin: 10px;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+  h3 {
+  margin: 15px;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  margin-left: 60px;
 }
 
 #data-card {
@@ -40,17 +60,17 @@ body {
   justify-content: center;
   align-items: center;
   height: 90%;
+  width: 100;
 }
 h1 {
-  font-size: 2rem;
+  color: white;
   text-align: center;
-  margin: 0 auto;
-  padding: 1rem;
-  font-family: cursive;
-
-  box-shadow: black;
 }
-
+.pro-name {
+  font-size: 40px;
+  font-weight: 600;
+  color: white;
+}
 article {
   margin: 0 auto;
   max-width: 800px;
@@ -61,8 +81,8 @@ article {
   justify-content: space-around;
   margin: 5px;
   cursor: pointer;
-  background-color: black;
-  color: white;
+  background-color: white;
+  /* color: white; */
   border-radius: 5px;
   font-style: bolder;
   font-size: 15px;
@@ -77,19 +97,28 @@ a .buttons {
 }
 button {
   border: none;
-  background-color: black;
+  /* background-color: white; */
   cursor: pointer;
   font-size: 1rem;
-  color: white;
+  color: black;
   font-weight: 20px;
   border-radius: 5px;
-  /* margin: 0 10px; */
+  padding: 5px;
 }
 #user-data {
-  height: 80%;
-  width: 265px;
-  margin: 10px;
-  font-size: 18px;
+  border: 4px solid black;
+  display: grid;
+  max-width: 1140px;
+  margin: auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  padding: 20px;
+  width: 50%;
+  height: 100%;
+  color: white;
+  background: grey;
+  text-align: center;
+  text-decoration: none;
 }
 #paginate {
   position: relative;
@@ -97,78 +126,25 @@ button {
 }
 
 #outlet {
-  margin-top: 50px;
+  width: 100%;
+  height: 300px;
+  padding: 10px;
+  color: white;
+  /* border: 4px solid black; */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: grey;
+  justify-content: center;
+  align-items: center;
 }
 a {
   text-decoration: none;
-
-  color: black;
+  align-items: center;
 }
-.btns {
-  padding: 5px;
-  font-size: 15px;
-  display: flex;
-  justify-content: space-around;
+#icons {
+  display: inline-block;
   margin: 5px;
-  background-color: black;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px;
-  /* box-shadow: black; */
-}
-.switch {
-  display: flex;
-  justify-content:left ;
-  align-items: left;
-  cursor: pointer;
-  /* width: 100vw; */
-  /* height: 100px; */
-  /* border-radius: 5px; */
-  font-size: 10px;
-}
-@media screen and (max-width: 667px) {
-  .Home {
-    flex-direction: column;
-    width: screen;
-    border: 1px solid black;
-    min-height: 800px;
-  }
-  #profile {
-    height: fit-content;
-    padding: 5px 2px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
-  }
-  #profile #avatar {
-    height: 50px;
-    width: 50px;
-  }
-  #profile-section {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  #data-card {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-
-    flex-wrap: wrap;
-
-    justify-content: space-between;
-  }
-  #user-data {
-    height: 180px;
-    font-size: 7px;
-  }
-  #paginate {
-    left: 100px;
-    position: absolute;
-  }
-  #outlet {
-    margin-top: 160px;
-  }
+  font-size: 30px;
+  margin-left: 60px;
 }

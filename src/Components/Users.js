@@ -10,7 +10,7 @@ const Users = ({ users, page, chooseRepo, scrollView, dynamicRoute }) => {
     <div
       id="data-card"
       style={{
-        width: "100%",
+        // width: "100%",
       }}
     >
       {selectedUsers.map((user) => (

@@ -5,7 +5,7 @@ function NavBar({ setExplode }) {
   return (
     <div>
      <NavLink to="/portfolio"></NavLink>
-     <button onClick={() => setExplode((e) => !e)}>ErrorBoundary</button> 
+     <button onClick={() => setExplode((e) => !e)}></button> 
     </div>
   );
 }

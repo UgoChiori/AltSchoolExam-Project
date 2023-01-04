@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+This project is a simple React application that allows you to search for GitHub repositories using the GitHub Repo API.
+Getting Started:
+To get started, create new React app: npx create-react-app altschoolassignment
+Start the development server:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+npm start 
+The application should now be running at http://localhost:3000.
 
-## Available Scripts
+The following dependencies were installed for this project:
 
-In the project directory, you can run:
+npm i- react-router-dom
+npm i- axios
+npm i- react-error-boundary
+npm i- styled-components
+npm i- react-switch
+npm i- react-scroll
+npm i- react-helmet-async
 
-### `npm start`
+url https://api.github.com/users/UgoChiori/repos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](https://alt-school-exam-project-zeta.vercel.app/) to view it in your browser.
+Next, data was collected from GitHub using axios, and was fetched and rendered using the React Hooks, useState and useEffect.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The useEffect and useState methods were used to fetch and update the data automatically, every time a new repository is created.
 
-### `npm test`
+Error Boundary was added to catch errors that may occur when code is executed. When an error is encountered, the error message is returned.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Using the App
+The app will display a list of repositories. You can click on a repository to view more details about it.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Built With
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- React - A JavaScript library for building user interfaces
+- axios - A Promise based HTTP client for the browser and node.js
+- GitHub API - Used to fetch repository data

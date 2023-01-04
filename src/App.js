@@ -9,7 +9,7 @@ import MyGithub from "./MyGithub";
 import axios from "axios";
 import ErrorBoundary from "./Components/ErrorBoundary";
 import { HelmetProvider } from "react-helmet-async";
-import ReactSwitch from "react-switch";
+// import ReactSwitch from "react-switch";
 
 function Bomb() {
   throw new Error("💥 GO AWAY!!!💥");
@@ -54,7 +54,7 @@ function App() {
         <section style={{ height: "100%" }}>
           <div className="switch">
             <label>{theme === "light" ? "Light Mode" : "Dark Mode"}</label>
-            <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
+            {/* <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} /> */}
           </div>
 
           <div
