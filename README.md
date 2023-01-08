@@ -33,5 +33,5 @@ Pagination was added to navigate between pages.
 Built With
 
 - React - A JavaScript library for building user interfaces
-- axios - A Promise based HTTP client for the browser and node.js
+- Axios - A Promise based HTTP client for the browser and node.js
 - GitHub API - Used to fetch repository data
