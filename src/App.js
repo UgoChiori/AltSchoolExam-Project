@@ -51,7 +51,7 @@ function App() {
       <meta name="description" content="Software developers in Lagos Nigeria" />
       <link rel="canonical" href="/portfolio" />
       <ThemeContext.Provider value={{ theme, toggleTheme }}>
-        <section style={{ height: "100%" }}>
+        <section style={{ height: "100%",  width: "100%"}} >
           <div className="switch">
             <label>{theme === "light" ? "Light Mode" : "Dark Mode"}</label>
             {/* <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} /> */}
@@ -65,6 +65,8 @@ function App() {
             }}
             className="Home"
             id={theme}
+
+          
           >
             <ErrorBoundary>
               {explode ? <Bomb /> : null}

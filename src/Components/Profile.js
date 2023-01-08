@@ -27,8 +27,8 @@ function Profile({
       </div>
       <div id="profile-details">
         
-        <p id="bio">{bio}</p>
-        <p id="bio">{location}</p>
+        <p id="bionic">{bio}</p>
+        <p id="bionic">{location}</p>
         <div>
           <a href="https://github.com/UgoChiori?tab=followers">
             <h3

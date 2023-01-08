@@ -9,9 +9,12 @@ const Users = ({ users, page, chooseRepo, scrollView, dynamicRoute }) => {
   return (
     <div
       id="data-card"
-      style={{
-        // width: "100%",
-      }}
+      style={
+        {
+          border: "1px solid yellow",
+          // width: "100%",
+        }
+      }
     >
       {selectedUsers.map((user) => (
         <User
@@ -20,7 +23,6 @@ const Users = ({ users, page, chooseRepo, scrollView, dynamicRoute }) => {
           html_url={user.html_url}
           description={user.description}
           chooseRepo={chooseRepo}
-          
         />
       ))}
     </div>

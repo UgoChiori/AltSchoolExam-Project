@@ -44,7 +44,7 @@ function MyGithub() {
 
   return (
     <div
-      // style={{ width: "100", border: "1px soild black", position: "relative" }}
+      style={{ width: "100%", border: "4px solid green", position: "relative" }}
     >
       <h1 alt="repository list">My Github Repositories</h1>
       <Users
