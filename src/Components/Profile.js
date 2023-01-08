@@ -9,6 +9,8 @@ function Profile({
   location,
   followers,
   following,
+  public_repos,
+  website,
   twitter_username,
   html_url,
 }) {
@@ -42,6 +44,10 @@ function Profile({
           <a href="https://github.com/UgoChiori?tab=following">
             <h3 id="bionic">Following: {following}</h3>
           </a>
+        </div>
+        <div>
+          <a href="https://ugo-s-portfolio.vercel.app/ ">
+            <h3 id="bionic">Website{website}</h3></a>
         </div>
 
         <a href="https://twitter.com/AdaOhafia/">
