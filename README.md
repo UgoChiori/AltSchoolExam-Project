@@ -2,13 +2,13 @@
 This project is a simple React application that allows you to search for GitHub repositories using the GitHub Repo API.
 =======
 This project is a simple React application that allows the user to search for GitHub repositories using the GitHub Repo API.
->>>>>>> fa30b1e5aa8b46b738b1f4e9155b340c3dc77365
+>>>>>>> 
 Getting Started:
 To get started, create new React app: npx create-react-app altschoolassignment
 Start the development server:
 
 npm start 
-The application should now be running at http://localhost:3000.
+The application is hosted at https://alt-school-exam-project-zeta.vercel.app/
 
 The following dependencies were installed for this project:
 
