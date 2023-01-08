@@ -5,7 +5,7 @@ const User = ({ id, name, description, chooseRepo }) => {
   return (
     <Link to={`/portfolio/${id}`}>
       <div className="user-data"
-      style={{border: "5px solid white", borderRadius: "10px", width:"350px", height: '400px', background: 'grey'}} 
+      style={{border: "2px solid black", borderRadius: "10px", width:"350px", height: '400px', background: 'grey', margin: '10px', padding: '10px'}} 
       onClick={chooseRepo}
       >
   <article key={id}>

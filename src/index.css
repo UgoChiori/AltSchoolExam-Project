@@ -64,7 +64,7 @@ h1 {
   color: white;
 }
 article {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   align-items: center;
   width: fit-content;
 }
@@ -140,7 +140,7 @@ a {
     background: black;
     opacity: 0.6;
     display: grid;
-    border: 5px solid wheat;
+    /* border: 5px solid wheat; */
     width: 100%;
     height: fit-content;
     z-index: 1;

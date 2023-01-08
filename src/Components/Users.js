@@ -11,7 +11,7 @@ const Users = ({ users, page, chooseRepo, scrollView, dynamicRoute }) => {
       id="data-card"
       style={
         {
-          border: "1px solid yellow",
+          // border: "1px solid yellow",
           // width: "100%",
         }
       }
