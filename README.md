@@ -1,5 +1,3 @@
-This project is a simple React application that allows you to search for GitHub repositories using the GitHub Repo API.
-
 This project is a simple React application that allows the user to search for GitHub repositories using the GitHub Repo API.
 
 Getting Started:
