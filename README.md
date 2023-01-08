@@ -27,6 +27,7 @@ Error Boundary was added to catch errors that may occur when code is executed. W
 
 Using the App
 The app will display a list of repositories. You can click on a repository to view more details about it.
+Pagination was added to navigate between pages.
 
 
 Built With
